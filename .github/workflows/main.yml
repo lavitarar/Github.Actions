@@ -2,16 +2,15 @@ name: Send Emails by Region
 
 on:
   schedule:
-    # Singapore → 9 AM SGT (≈ 1 AM UTC)
-    - cron: '0 1 * * *'
+    - cron: '0 1 * * *'   # Singapore
+    - cron: '0 5 * * *'   # Dubai
 
-    # Dubai → 9 AM GST (≈ 5 AM UTC)
-    - cron: '0 5 * * *'
+  workflow_dispatch:   # 👈 ADD THIS LINE
 
 jobs:
 
   singapore:
-    if: github.event.schedule == '0 1 * * *'
+    if: github.event.schedule == '0 1 * * *' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +30,7 @@ jobs:
 
 
   dubai:
-    if: github.event.schedule == '0 5 * * *'
+    if: github.event.schedule == '0 5 * * *' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
