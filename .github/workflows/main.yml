@@ -2,8 +2,8 @@ name: Send Emails by Region
 
 on:
   schedule:
-    - cron: '29 15 * * *'   # Singapore
-    - cron: '30 15 * * *'   # Dubai
+    - cron: '40 15 * * *'   # Singapore
+    - cron: '41 15 * * *   # Dubai
 
   workflow_dispatch:   # 👈 ADD THIS LINE
 
