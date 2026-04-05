@@ -64,18 +64,12 @@ def send_email(to_email, name):
         msg.set_content(f"""
 Hi {name},
 
-I hope you're doing well.
+I am writing to apply for Data Engineer / Data Analyst roles or related to my skills. I have hands-on experience in SQL, Power BI, ETL pipelines (Airflow, APIs, Bronze-Silver-Gold architecture) and a strong passion for building scalable data solutions.
 
-I am writing to express my interest in Data Analyst / Data Engineer opportunities at your organization.
+Please find my resume attached for your consideration. I would welcome the opportunity to discuss how I can contribute to your team.
 
-I have experience in SQL, Power BI, and ETL pipelines.
-
-Please find my resume attached.
-
-I would really appreciate any opportunity or referral.
-
-Best regards,  
-Your Name
+Best regards 
+Lavi Tarar
 """)
 
         # 📎 ATTACH RESUME
