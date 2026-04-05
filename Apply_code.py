@@ -64,6 +64,8 @@ def send_email(to_email, name):
         msg.set_content(f"""
 Hi {name},
 
+I hope this message finds you well.  
+ 
 I am writing to apply for Data Engineer / Data Analyst roles or related to my skills. I have hands-on experience in SQL, Power BI, ETL pipelines (Airflow, APIs, Bronze-Silver-Gold architecture) and a strong passion for building scalable data solutions.
 
 Please find my resume attached for your consideration. I would welcome the opportunity to discuss how I can contribute to your team.
@@ -98,7 +100,7 @@ Lavi Tarar
 # ================= SEND EMAILS =================
 for index, row in df_filtered.iterrows():
     email = row[email_column]
-    name = row.get("Name", "Sir/Madam")
+    name = row.get("Name", "there")
 
     send_email(email, name)
 
