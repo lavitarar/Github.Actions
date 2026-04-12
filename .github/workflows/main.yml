@@ -2,7 +2,7 @@ name: Send Emails by Region
 
 on:
   schedule:
-    - cron: '20 5 * * 1'   # 
+    - cron: '15 4 * * 1'   # 
     - cron: '15 0 * * 1'   # 
 
   workflow_dispatch:   # 👈 ADD THIS LINE
@@ -30,7 +30,7 @@ jobs:
 
 
   dubai:
-    if: github.event.schedule == '20 5 * * 1' || github.event_name == 'workflow_dispatch'
+    if: github.event.schedule == '15 4 * * 1' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
